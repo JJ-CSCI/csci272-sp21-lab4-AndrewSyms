@@ -8,8 +8,15 @@ using Catch::Matchers::Equals;
 
 // Fix the following class
 class Complex {
-    void operator>>(std::string&) const;
-    void operator<<(const std::string&);
+  private:
+  int re, im;
+  public:
+  Complex (int real, int imag) {
+    real = re;
+    imag = im;
+  }
+  void operator>>(std::string&) const;
+  void operator<<(const std::string&);
 };
 
 //------------------------------
